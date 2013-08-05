@@ -5,5 +5,7 @@ class CreateWords < ActiveRecord::Migration
       t.string :signature
       t.timestamps
     end
+
+    add_index :words, :signature
   end
 end
