@@ -1,5 +1,7 @@
 class Word < ActiveRecord::Base
-  def anagrams
-    Word.find_by_signature()
+  def self.anagrams(user_input)
+    sig = user_input.downcase.chomp
+    sig = sig.split(//).sort.join('')
+    Word.where(signature: sig)
   end
 end

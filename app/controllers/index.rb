@@ -3,4 +3,9 @@ get '/' do
   erb :index
 end
 
+post '/' do
+  @word = params[:word]
+  @anagrams = Word.anagrams(@word)
 
+  erb :index
+end

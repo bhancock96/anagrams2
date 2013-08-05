@@ -1,7 +1,12 @@
 <div class="container">
  <h2>Find Anagrams</h2> 
- <form action="" method="">
+ <form action="/" method="post">
    <input type="text" name="word" placeholder="Enter a word">
    <input type="submit" value="Submit">
  </form>
 </div>
+
+<div>
+  <%= erb :_anagram_list, :layout => false %>
+</div>
+
